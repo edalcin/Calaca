@@ -5,7 +5,7 @@
     <title>Busca Integrada de Recursos de Informação em Biodiversidade</title>
     <link rel='stylesheet' type='text/css' href='css/reset.css'>
     <link rel='stylesheet' type='text/css' href='css/calaca.css'>
-    <script src='bower_components/angular/angular.min.js' type='text/javascript'></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <!--[if IE]>
         <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
     <![endif]-->
@@ -30,7 +30,16 @@
     <p class='no-results' ng-show='!results.length && !loading'>Sem resultados</p>
     <article class='result' ng-repeat='result in results track by $id(result)'>
       <h2>{{result.titulo}}</h2>
-      <p><a href="{{result.url}}" target="_blank"></a>{{result.url}}</p>
+      <h3>Tipo: {{result.tipo}}</h3></p>
+      <h3>{{result.desc}}</h3>       
+      <h3>Autor: {{result.autor}}</h3>
+      <h3>Tema: {{result.tema}}</h3>
+      <h3>Taxon: {{result.taxon}}</h3>
+      <h3>Espaço: {{result.espaco}}</h3>      
+      <h3>Tempo: {{result.tempo}}</h3>            
+      <h3><a href="{{result.url}}" "target="_blank">{{result.url}}</a></h3>
+      <h3>{{result._id}}</h3>
+      </p>
     </article>
   </section>
   <section class='pagination-controls'>
