@@ -29,16 +29,19 @@
   <section class='results'>
     <p class='no-results' ng-show='!results.length && !loading'>Sem resultados</p>
     <article class='result' ng-repeat='result in results track by $id(result)'>
-      <h2>{{result.titulo}}</h2>
-      <h3>Tipo: {{result.tipo}}</h3></p>
-      <h3>{{result.desc}}</h3>       
-      <h3>Autor: {{result.autor}}</h3>
-      <h3>Tema: {{result.tema}}</h3>
-      <h3>Taxon: {{result.taxon}}</h3>
-      <h3>Espaço: {{result.espaco}}</h3>      
-      <h3>Tempo: {{result.tempo}}</h3>            
-      <h3><a href="{{result.url}}" "target="_blank">{{result.url}}</a></h3>
-      <h3>{{result._id}}</h3>
+      <h2>{{result.titulo}}<input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"></h2>
+      <!-- habilita mostrar metadados -->
+      <div class="check-element animate-hide" ng-show="checked">
+        <h3>Tipo: {{result.tipo}}</h3></p>
+        <h3>{{result.desc}}</h3>       
+        <h3>Autor: {{result.autor}}</h3>
+        <h3>Tema: {{result.tema}}</h3>
+        <h3>Taxon: {{result.taxon}}</h3>
+        <h3>Espaço: {{result.espaco}}</h3>      
+        <h3>Tempo: {{result.tempo}}</h3>            
+        <h3><a href="{{result.url}}" "target="_blank">{{result.url}}</a></h3>
+        <h3>{{result._id}}</h3>
+      </div>
       </p>
     </article>
   </section>
