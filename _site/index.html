@@ -29,7 +29,7 @@
   <section class='results'>
     <p class='no-results' ng-show='!results.length && !loading'>Sem resultados</p>
     <article class='result' ng-repeat='result in results track by $id(result)'>
-      <h2>{{result.type}}: {{result.name}}<input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"></h2>
+      <h2>{{result.type}}: {{result.name}} (<input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"> mostrar)</h2>
 
       <!-- habilita mostrar metadados -->
       <div class="check-element animate-hide" ng-show="checked">
